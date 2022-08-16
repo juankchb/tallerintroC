@@ -1,18 +1,19 @@
 #*
 #Nombre: Juan Camilo Fernandez
+#Primer taller c
 #Script para automatizar proceso compilacion
-#Producto entre dosnumeros 
+#App generar triangulo
 #/
 
 GCC=gcc
 FLAGS=-ansi -pedantic -Wall
 
-PROGS=product_main
+PROGS=triangulo_main
 
-producto_main:
+triangulo_main:
 	$(GCC) $(FLAGS) $@.c -c
-	$(GCC) $(FLAGS) pro_lib.c -c
-	$(GCC) $(FLAGS) -o $@ pro_lib.o $@.o 
+	$(GCC) $(FLAGS) triangulo_lib.c -c
+	$(GCC) $(FLAGS) -o $@ triangulo_lib.o $@.o 
 
 clean:
 	$(RM) *.o$(PROGRS)
